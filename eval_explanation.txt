@@ -1,0 +1,15 @@
+Based on the utility value we can determine the Evaluation function.  
+If the utility value is higher then the decision will be better to calculate the utility value.Here the score gives the utility value. Higher the score value it is choosen to predict the next move.
+
+In Minimax.py:
+
+def nextTurn(self, state):
+        if self.currentTurn == 1:
+            score = state.player1Score * 2 - state.player2Score
+        elif self.currentTurn == 2:
+            score = state.player2Score * 2 - state.player1Score
+        return score
+
+This function helps the computer beat the human if he plays randomly.
+After calculating the values, the highest value is selected and the move is predicted.
+
